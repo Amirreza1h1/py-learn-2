@@ -3,8 +3,9 @@ import random
 computer_choice=0
 computer_score=0
 user_score=0
+y=int(input("turn of wins: "))
 
-while computer_score != 5 or user_score != 5:
+while computer_score != y or user_score != y:
 
     x=random.randint(1,3) #1=rock 2=paper 3=scissors
 
@@ -34,9 +35,9 @@ while computer_score != 5 or user_score != 5:
         user_score=user_score+1
     elif  computer_choice == "scissors" and user_choice == "paper":
         computer_score=computer_score+1
-    if  computer_score == 5:
+    if  computer_score == y:
         print("computer 💻 win")
         break
-    if user_score == 5:
+    if user_score == y:
         print("user 🧠 win")
         break
